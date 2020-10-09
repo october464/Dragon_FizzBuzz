@@ -120,28 +120,33 @@
 
 
 
-        //A named function
+        //A named function where the user input is passed through
         function DoFizzBuzzFoundation(fizz, buzz) {
+            //where the output it stored form 1 to 100
             let output = "";
             
             for (let loop = 1; loop <= 100; loop++) {
-                
+
+                //Checking if the first number entered is multiple of 1 through 100
                 let fizzRemainder = loop % fizz;
+
+                //Checking if the second number entered is multiple of 1 through 100
                 let buzzRemainder = loop % buzz;
-                //display if the input Fizzbuzz if remainder is 0
+
+                //Display Fizzbuzz if input remainder is 0
                 if (fizzRemainder == 0 && buzzRemainder == 0) {
                     output += "<span class='fizzbuzz'>Fizzbuzz</span> ";
 
                 }
-                //display if the input Fizz if remainder is 0
+                //Display Fizz if input remainder is 0
                 else if (fizzRemainder == 0) {
                     output += "<span class='fizz'>Fizz</span> ";
                 }
-                //display if the input Buzz if remainder is 0
+                //Display Buzz if input remainder is 0
                 else if (buzzRemainder == 0) {
                     output += "<span class='buzz'>Buzz</span> ";
                 }
-                //display loop on the page
+                //Display loop 1 through 100 on the page
                 else {
                     output += `${loop} ` ;
                 } 

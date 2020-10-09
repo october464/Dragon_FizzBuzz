@@ -111,7 +111,7 @@
             let buzz = Number(document.getElementById("txtFizzBuzzIn2").value);
 
             //Step 2: Run the user data through the named function
-            let output = DoFizzBuzzFoundation(fizz, buzz);
+            let output = FizzBuzz(fizz, buzz);
 
             //Step 3: Output the result of the FizzBuzz named function
             document.getElementById("fizzResult").innerHTML = output;
@@ -121,7 +121,7 @@
 
 
         //A named function where the user input is passed through
-        function DoFizzBuzzFoundation(fizz, buzz) {
+        function FizzBuzz(fizz, buzz) {
             //where the output it stored form 1 to 100
             let output = "";
             

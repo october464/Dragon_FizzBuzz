@@ -53,38 +53,45 @@
                 <pre>
 <code class="language-js line-numbers">//Wire up and event handler for the click event of btnFizzBuzz
 document.getElementById("btnFizzBuzz").addEventListener("click", function () {
-//Step 1: Get the user data if there is any
-let fizz = Number(document.getElementById("txtFizzBuzzIn1").value);
-let buzz = Number(document.getElementById("txtFizzBuzzIn2").value);
+    //Step 1: Get the user data if there is any
+    let fizz = Number(document.getElementById("txtFizzBuzzIn1").value);
+    let buzz = Number(document.getElementById("txtFizzBuzzIn2").value);
 
-//Step 2: Run the user data through the named function
-let output = DoFizzBuzzFoundation(fizz, buzz);
+    //Step 2: Run the user data through the named function
+    let output = DoFizzBuzzFoundation(fizz, buzz);
 
-//Step 3: Output the result of the FizzBuzz named function
-document.getElementById("fizzResult").innerHTML = output;
+    //Step 3: Output the result of the FizzBuzz named function
+    document.getElementById("fizzResult").innerHTML = output;
 
 });
 function DoFizzBuzzFoundation(fizz, buzz) {
+    //where the output it stored form 1 to 100
     let output = "";
 
     for (let loop = 1; loop <= 100; loop++) {
+        //Checking if the first number entered is multiple of 1 through 100
         let fizzRemainder = loop % fizz;
+        //Checking if the second number entered is multiple of 1 through 100
         let buzzRemainder = loop % buzz;
-    //output += `loop value: ${loop} <br /> FR: ${loop}% ${fizz} = ${fizzRemainder} 
-    //<br /> BR: ${loop}% ${buzz} = ${buzzRemainder} <br /><br />`;
-    if (fizzRemainder == 0 && buzzRemainder == 0) {
-        output += `Fizzbuzz <br />`;
+        //Display Fizzbuzz if input remainder is 0
+        if (fizzRemainder == 0 && buzzRemainder == 0) {
+        output += "<span class='fizzbuzz'>Fizzbuzz</span> ";
+
     }
+        //Display Fizz if input remainder is 0
         else if (fizzRemainder == 0) {
-                output += `Fizz <br />`;
+            output += "<span class='fizz'>Fizz</span> ";
         }
+        //Display Buzz if input remainder is 0
         else if (buzzRemainder == 0) {
-                output += `Buzz <br />`;
+            output += "<span class='buzz'>Buzz</span> ";
         }
-         else {
-               output += `${loop} <br />`;
+        //Display loop 1 through 100 on the page
+        else {
+            output += `${loop} ` ;
+            }
         }
-    }
+
     return output;
 }
                     </code>
